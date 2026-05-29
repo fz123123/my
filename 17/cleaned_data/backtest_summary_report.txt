@@ -1,0 +1,87 @@
+======================================================================
+        BACKTEST SUMMARY REPORT (Cleaned Data)
+======================================================================
+Generated on: 2026-05-24 10:27:25.558488
+Number of Symbols: 5
+======================================================================
+
+1. STRATEGY PERFORMANCE SUMMARY
+------------------------------
+   Symbol       Strategy Total Return Annualized Return Sharpe Ratio Max Drawdown  Total Trades
+STOCK_001   MA_Crossover       -0.04%            -0.03%        -0.40       -0.10%             4
+STOCK_001            RSI       -0.01%            -0.01%        -0.05       -0.11%             7
+STOCK_001           MACD       -0.12%            -0.09%        -0.78       -0.19%            32
+STOCK_001 Bollinger_Band       -0.00%            -0.00%        -0.03       -0.11%             6
+STOCK_002   MA_Crossover       -0.11%            -0.08%        -0.84       -0.15%             6
+STOCK_002            RSI       -0.12%            -0.09%        -0.76       -0.17%             7
+STOCK_002           MACD       -0.07%            -0.05%        -0.43       -0.16%            22
+STOCK_002 Bollinger_Band       -0.13%            -0.09%        -0.90       -0.17%             7
+STOCK_003   MA_Crossover        0.08%             0.06%         0.47       -0.13%            10
+STOCK_003            RSI        0.20%             0.14%         1.28       -0.06%             9
+STOCK_003           MACD        0.24%             0.16%         1.42       -0.11%            24
+STOCK_003 Bollinger_Band        0.21%             0.14%         1.20       -0.07%             9
+STOCK_004   MA_Crossover        0.04%             0.03%         0.24       -0.13%             5
+STOCK_004            RSI        0.07%             0.05%         0.56       -0.13%             6
+STOCK_004           MACD        0.14%             0.10%         0.90       -0.08%            22
+STOCK_004 Bollinger_Band        0.12%             0.08%         1.00       -0.13%             6
+STOCK_005   MA_Crossover        0.01%             0.01%         0.07       -0.10%            11
+STOCK_005            RSI        0.18%             0.13%         1.16       -0.07%            10
+STOCK_005           MACD       -0.00%            -0.00%        -0.02       -0.15%            25
+STOCK_005 Bollinger_Band        0.17%             0.12%         1.04       -0.09%             8
+
+2. BEST PERFORMING STRATEGIES
+------------------------------
+
+Symbol: STOCK_001
+Best Strategy: Bollinger_Band
+Total Return: -0.00%
+Annualized Return: -0.00%
+Sharpe Ratio: -0.03
+Max Drawdown: -0.11%
+Total Trades: 6
+
+--------------------------------------------------
+
+Symbol: STOCK_002
+Best Strategy: MACD
+Total Return: -0.07%
+Annualized Return: -0.05%
+Sharpe Ratio: -0.43
+Max Drawdown: -0.16%
+Total Trades: 22
+
+--------------------------------------------------
+
+Symbol: STOCK_003
+Best Strategy: MACD
+Total Return: 0.24%
+Annualized Return: 0.16%
+Sharpe Ratio: 1.42
+Max Drawdown: -0.11%
+Total Trades: 24
+
+--------------------------------------------------
+
+Symbol: STOCK_004
+Best Strategy: MACD
+Total Return: 0.14%
+Annualized Return: 0.10%
+Sharpe Ratio: 0.90
+Max Drawdown: -0.08%
+Total Trades: 22
+
+--------------------------------------------------
+
+Symbol: STOCK_005
+Best Strategy: RSI
+Total Return: 0.18%
+Annualized Return: 0.13%
+Sharpe Ratio: 1.16
+Max Drawdown: -0.07%
+Total Trades: 10
+
+--------------------------------------------------
+
+======================================================================
+         END OF REPORT
+======================================================================

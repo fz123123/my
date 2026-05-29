@@ -1,0 +1,69 @@
+name: Quant Trading Tests
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: '3.12'
+  NODE_VERSION: '20'
+
+jobs:
+  run-tests:
+    name: Run All Tests
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: '33/package-lock.json'
+      
+      - name: Install project dependencies
+        shell: pwsh
+        run: |
+          Write-Host "=== Installing Python dependencies ==="
+          $projects = @('0', '17', '33', '88')
+          foreach ($project in $projects) {
+            if (Test-Path "$project/requirements.txt") {
+              Write-Host "Installing dependencies for project $project..."
+              python -m pip install -r "$project/requirements.txt"
+            }
+          }
+          
+          Write-Host "`n=== Installing Node.js dependencies ==="
+          if (Test-Path "33/package.json") {
+            Push-Location "33"
+            npm ci
+            Pop-Location
+          }
+      
+      - name: Run all tests
+        shell: pwsh
+        run: |
+          Write-Host "=== Running all tests ==="
+          python run_all_tests.py
+      
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            **/tests/
+            **/test*.txt
+          retention-days: 7

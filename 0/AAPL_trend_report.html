@@ -1,0 +1,1481 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>回测报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .metric-box { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+        .metric-label { color: #7f8c8d; font-size: 14px; }
+        .metric-value { color: #2c3e50; font-size: 20px; font-weight: bold; }
+        .positive { color: #27ae60; }
+        .negative { color: #e74c3c; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+    </style>
+</head>
+<body>
+    <h1>量化策略回测报告</h1>
+    <p>生成时间: 2026-05-28 17:26:57</p>
+    
+    <h2>策略概览</h2>
+    <div class="metrics">
+        <div class="metric-box">
+            <div class="metric-label">总收益率</div>
+            <div class="metric-value positive">1357.76%</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">年化收益率</div>
+            <div class="metric-value positive">46.48%</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">夏普比率</div>
+            <div class="metric-value">0.95</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">最大回撤</div>
+            <div class="metric-value negative">-30.84%</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">胜率</div>
+            <div class="metric-value">53.30%</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-label">交易次数</div>
+            <div class="metric-value">129</div>
+        </div>
+    </div>
+    
+    <h2>详细指标</h2>
+    <table>
+<tr><td>Initial Capital</td><td>100,000.00</td></tr><tr><td>Transaction Cost</td><td>0.10%</td></tr><tr><td>Total Return</td><td>1357.76%</td></tr><tr><td>Total Return (Net)</td><td>1033.48%</td></tr><tr><td>Benchmark Return</td><td>160.35%</td></tr><tr><td>Annualized Return</td><td>46.48%</td></tr><tr><td>Annualized Return (Net)</td><td>41.32%</td></tr><tr><td>Benchmark Annualized Return</td><td>14.60%</td></tr><tr><td>Volatility</td><td>49.17%</td></tr><tr><td>Volatility (Net)</td><td>49.02%</td></tr><tr><td>Benchmark Volatility</td><td>50.35%</td></tr><tr><td>Sharpe Ratio</td><td>0.95</td></tr><tr><td>Sharpe Ratio (Net)</td><td>0.84</td></tr><tr><td>Benchmark Sharpe Ratio</td><td>0.29</td></tr><tr><td>Sortino Ratio</td><td>1.48</td></tr><tr><td>Calmar Ratio</td><td>1.51</td></tr><tr><td>Max Drawdown</td><td>-30.84%</td></tr><tr><td>Max Drawdown (Net)</td><td>-30.99%</td></tr><tr><td>Benchmark Max Drawdown</td><td>-19.24%</td></tr><tr><td>Win Rate</td><td>53.30%</td></tr><tr><td>Win Rate (Net)</td><td>53.21%</td></tr><tr><td>Profit Factor</td><td>1.18</td></tr><tr><td>Profit Factor (Net)</td><td>1.17</td></tr><tr><td>Reward/Risk Ratio</td><td>1.04</td></tr><tr><td>Beta</td><td>nan</td></tr><tr><td>Alpha</td><td>nan%</td></tr><tr><td>VaR (95%)</td><td>-4.70%</td></tr><tr><td>CVaR (95%)</td><td>-6.67%</td></tr><tr><td>Number of Trades</td><td>129</td></tr><tr><td>Average Trade Duration</td><td>13.5 days</td></tr>
+    </table>
+    
+    <h2>交易记录</h2>
+
+    <table>
+        <tr><th>开仓日期</th><th>平仓日期</th><th>仓位</th><th>开仓价</th><th>平仓价</th><th>盈亏</th><th>盈亏金额</th><th>持仓天数</th></tr>
+
+        <tr>
+            <td>2020-03-26</td>
+            <td>2020-04-05</td>
+            <td>空头</td>
+            <td>82.21</td>
+            <td>77.41</td>
+            <td class="positive">5.84%</td>
+            <td class="positive">5,837.76</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>2020-04-05</td>
+            <td>2020-04-06</td>
+            <td>多头</td>
+            <td>77.41</td>
+            <td>82.50</td>
+            <td class="positive">6.57%</td>
+            <td class="positive">6,573.90</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-04-06</td>
+            <td>2020-04-10</td>
+            <td>空头</td>
+            <td>82.50</td>
+            <td>76.62</td>
+            <td class="positive">7.12%</td>
+            <td class="positive">7,124.04</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>2020-04-10</td>
+            <td>2020-04-11</td>
+            <td>多头</td>
+            <td>76.62</td>
+            <td>79.42</td>
+            <td class="positive">3.66%</td>
+            <td class="positive">3,660.54</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-04-11</td>
+            <td>2020-04-20</td>
+            <td>空头</td>
+            <td>79.42</td>
+            <td>73.49</td>
+            <td class="positive">7.47%</td>
+            <td class="positive">7,473.10</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td>2020-04-20</td>
+            <td>2020-04-21</td>
+            <td>多头</td>
+            <td>73.49</td>
+            <td>79.03</td>
+            <td class="positive">7.54%</td>
+            <td class="positive">7,540.37</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-04-21</td>
+            <td>2020-06-07</td>
+            <td>空头</td>
+            <td>79.03</td>
+            <td>78.39</td>
+            <td class="positive">0.81%</td>
+            <td class="positive">808.42</td>
+            <td>47</td>
+        </tr>
+
+        <tr>
+            <td>2020-06-07</td>
+            <td>2020-06-28</td>
+            <td>多头</td>
+            <td>78.39</td>
+            <td>96.84</td>
+            <td class="positive">23.54%</td>
+            <td class="positive">23,536.78</td>
+            <td>21</td>
+        </tr>
+
+        <tr>
+            <td>2020-06-28</td>
+            <td>2020-06-29</td>
+            <td>空头</td>
+            <td>96.84</td>
+            <td>90.91</td>
+            <td class="positive">6.12%</td>
+            <td class="positive">6,121.30</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-06-29</td>
+            <td>2020-07-21</td>
+            <td>多头</td>
+            <td>90.91</td>
+            <td>99.76</td>
+            <td class="positive">9.73%</td>
+            <td class="positive">9,733.10</td>
+            <td>22</td>
+        </tr>
+
+        <tr>
+            <td>2020-07-21</td>
+            <td>2020-07-22</td>
+            <td>空头</td>
+            <td>99.76</td>
+            <td>99.97</td>
+            <td class="negative">-0.21%</td>
+            <td class="negative">-208.61</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-07-22</td>
+            <td>2020-07-28</td>
+            <td>多头</td>
+            <td>99.97</td>
+            <td>110.01</td>
+            <td class="positive">10.04%</td>
+            <td class="positive">10,038.88</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>2020-07-28</td>
+            <td>2020-07-31</td>
+            <td>空头</td>
+            <td>110.01</td>
+            <td>102.03</td>
+            <td class="positive">7.25%</td>
+            <td class="positive">7,248.74</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2020-07-31</td>
+            <td>2020-08-22</td>
+            <td>多头</td>
+            <td>102.03</td>
+            <td>108.49</td>
+            <td class="positive">6.33%</td>
+            <td class="positive">6,333.50</td>
+            <td>22</td>
+        </tr>
+
+        <tr>
+            <td>2020-08-22</td>
+            <td>2020-08-23</td>
+            <td>空头</td>
+            <td>108.49</td>
+            <td>103.99</td>
+            <td class="positive">4.15%</td>
+            <td class="positive">4,152.74</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-08-23</td>
+            <td>2020-09-19</td>
+            <td>多头</td>
+            <td>103.99</td>
+            <td>90.01</td>
+            <td class="negative">-13.44%</td>
+            <td class="negative">-13,444.58</td>
+            <td>27</td>
+        </tr>
+
+        <tr>
+            <td>2020-09-19</td>
+            <td>2020-10-12</td>
+            <td>空头</td>
+            <td>90.01</td>
+            <td>89.60</td>
+            <td class="positive">0.45%</td>
+            <td class="positive">452.44</td>
+            <td>23</td>
+        </tr>
+
+        <tr>
+            <td>2020-10-12</td>
+            <td>2020-10-13</td>
+            <td>多头</td>
+            <td>89.60</td>
+            <td>94.83</td>
+            <td class="positive">5.84%</td>
+            <td class="positive">5,835.83</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2020-10-13</td>
+            <td>2020-12-04</td>
+            <td>空头</td>
+            <td>94.83</td>
+            <td>97.52</td>
+            <td class="negative">-2.83%</td>
+            <td class="negative">-2,834.66</td>
+            <td>52</td>
+        </tr>
+
+        <tr>
+            <td>2020-12-04</td>
+            <td>2020-12-16</td>
+            <td>多头</td>
+            <td>97.52</td>
+            <td>100.63</td>
+            <td class="positive">3.19%</td>
+            <td class="positive">3,187.98</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>2020-12-16</td>
+            <td>2020-12-18</td>
+            <td>空头</td>
+            <td>100.63</td>
+            <td>102.92</td>
+            <td class="negative">-2.27%</td>
+            <td class="negative">-2,274.26</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2020-12-18</td>
+            <td>2020-12-27</td>
+            <td>多头</td>
+            <td>102.92</td>
+            <td>108.03</td>
+            <td class="positive">4.97%</td>
+            <td class="positive">4,970.88</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td>2020-12-27</td>
+            <td>2020-12-29</td>
+            <td>空头</td>
+            <td>108.03</td>
+            <td>105.35</td>
+            <td class="positive">2.48%</td>
+            <td class="positive">2,483.07</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2020-12-29</td>
+            <td>2021-01-07</td>
+            <td>多头</td>
+            <td>105.35</td>
+            <td>111.70</td>
+            <td class="positive">6.02%</td>
+            <td class="positive">6,024.80</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td>2021-01-07</td>
+            <td>2021-01-23</td>
+            <td>空头</td>
+            <td>111.70</td>
+            <td>115.32</td>
+            <td class="negative">-3.24%</td>
+            <td class="negative">-3,242.43</td>
+            <td>16</td>
+        </tr>
+
+        <tr>
+            <td>2021-01-23</td>
+            <td>2021-01-28</td>
+            <td>多头</td>
+            <td>115.32</td>
+            <td>119.26</td>
+            <td class="positive">3.42%</td>
+            <td class="positive">3,422.45</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>2021-01-28</td>
+            <td>2021-01-29</td>
+            <td>空头</td>
+            <td>119.26</td>
+            <td>117.55</td>
+            <td class="positive">1.44%</td>
+            <td class="positive">1,440.18</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2021-01-29</td>
+            <td>2021-02-24</td>
+            <td>多头</td>
+            <td>117.55</td>
+            <td>123.29</td>
+            <td class="positive">4.89%</td>
+            <td class="positive">4,887.28</td>
+            <td>26</td>
+        </tr>
+
+        <tr>
+            <td>2021-02-24</td>
+            <td>2021-02-26</td>
+            <td>空头</td>
+            <td>123.29</td>
+            <td>116.34</td>
+            <td class="positive">5.64%</td>
+            <td class="positive">5,636.32</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2021-02-26</td>
+            <td>2021-03-19</td>
+            <td>多头</td>
+            <td>116.34</td>
+            <td>114.75</td>
+            <td class="negative">-1.37%</td>
+            <td class="negative">-1,370.72</td>
+            <td>21</td>
+        </tr>
+
+        <tr>
+            <td>2021-03-19</td>
+            <td>2021-04-16</td>
+            <td>空头</td>
+            <td>114.75</td>
+            <td>103.00</td>
+            <td class="positive">10.24%</td>
+            <td class="positive">10,238.67</td>
+            <td>28</td>
+        </tr>
+
+        <tr>
+            <td>2021-04-16</td>
+            <td>2021-04-17</td>
+            <td>多头</td>
+            <td>103.00</td>
+            <td>105.20</td>
+            <td class="positive">2.14%</td>
+            <td class="positive">2,137.72</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2021-04-17</td>
+            <td>2021-06-07</td>
+            <td>空头</td>
+            <td>105.20</td>
+            <td>113.57</td>
+            <td class="negative">-7.96%</td>
+            <td class="negative">-7,957.25</td>
+            <td>51</td>
+        </tr>
+
+        <tr>
+            <td>2021-06-07</td>
+            <td>2021-06-22</td>
+            <td>多头</td>
+            <td>113.57</td>
+            <td>119.47</td>
+            <td class="positive">5.19%</td>
+            <td class="positive">5,190.41</td>
+            <td>15</td>
+        </tr>
+
+        <tr>
+            <td>2021-06-22</td>
+            <td>2021-06-23</td>
+            <td>空头</td>
+            <td>119.47</td>
+            <td>115.06</td>
+            <td class="positive">3.69%</td>
+            <td class="positive">3,689.07</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2021-06-23</td>
+            <td>2021-06-27</td>
+            <td>多头</td>
+            <td>115.06</td>
+            <td>122.51</td>
+            <td class="positive">6.48%</td>
+            <td class="positive">6,475.63</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>2021-06-27</td>
+            <td>2021-06-28</td>
+            <td>空头</td>
+            <td>122.51</td>
+            <td>111.12</td>
+            <td class="positive">9.29%</td>
+            <td class="positive">9,293.82</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2021-06-28</td>
+            <td>2021-07-12</td>
+            <td>多头</td>
+            <td>111.12</td>
+            <td>124.67</td>
+            <td class="positive">12.19%</td>
+            <td class="positive">12,187.65</td>
+            <td>14</td>
+        </tr>
+
+        <tr>
+            <td>2021-07-12</td>
+            <td>2021-07-19</td>
+            <td>空头</td>
+            <td>124.67</td>
+            <td>124.56</td>
+            <td class="positive">0.09%</td>
+            <td class="positive">89.88</td>
+            <td>7</td>
+        </tr>
+
+        <tr>
+            <td>2021-07-19</td>
+            <td>2021-07-25</td>
+            <td>多头</td>
+            <td>124.56</td>
+            <td>132.58</td>
+            <td class="positive">6.44%</td>
+            <td class="positive">6,441.23</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>2021-07-25</td>
+            <td>2021-07-28</td>
+            <td>空头</td>
+            <td>132.58</td>
+            <td>130.83</td>
+            <td class="positive">1.32%</td>
+            <td class="positive">1,315.14</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2021-07-28</td>
+            <td>2021-08-06</td>
+            <td>多头</td>
+            <td>130.83</td>
+            <td>137.13</td>
+            <td class="positive">4.81%</td>
+            <td class="positive">4,814.91</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td>2021-08-06</td>
+            <td>2021-08-07</td>
+            <td>空头</td>
+            <td>137.13</td>
+            <td>131.05</td>
+            <td class="positive">4.44%</td>
+            <td class="positive">4,440.30</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2021-08-07</td>
+            <td>2021-08-28</td>
+            <td>多头</td>
+            <td>131.05</td>
+            <td>137.71</td>
+            <td class="positive">5.09%</td>
+            <td class="positive">5,088.32</td>
+            <td>21</td>
+        </tr>
+
+        <tr>
+            <td>2021-08-28</td>
+            <td>2021-09-14</td>
+            <td>空头</td>
+            <td>137.71</td>
+            <td>136.23</td>
+            <td class="positive">1.08%</td>
+            <td class="positive">1,076.10</td>
+            <td>17</td>
+        </tr>
+
+        <tr>
+            <td>2021-09-14</td>
+            <td>2021-09-26</td>
+            <td>多头</td>
+            <td>136.23</td>
+            <td>125.51</td>
+            <td class="negative">-7.87%</td>
+            <td class="negative">-7,872.21</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>2021-09-26</td>
+            <td>2021-10-08</td>
+            <td>空头</td>
+            <td>125.51</td>
+            <td>118.16</td>
+            <td class="positive">5.85%</td>
+            <td class="positive">5,853.60</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>2021-10-08</td>
+            <td>2021-10-09</td>
+            <td>多头</td>
+            <td>118.16</td>
+            <td>125.90</td>
+            <td class="positive">6.55%</td>
+            <td class="positive">6,552.81</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2021-10-09</td>
+            <td>2021-10-30</td>
+            <td>空头</td>
+            <td>125.90</td>
+            <td>115.24</td>
+            <td class="positive">8.47%</td>
+            <td class="positive">8,470.16</td>
+            <td>21</td>
+        </tr>
+
+        <tr>
+            <td>2021-10-30</td>
+            <td>2021-11-02</td>
+            <td>多头</td>
+            <td>115.24</td>
+            <td>116.80</td>
+            <td class="positive">1.35%</td>
+            <td class="positive">1,350.89</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2021-11-02</td>
+            <td>2021-12-08</td>
+            <td>空头</td>
+            <td>116.80</td>
+            <td>132.47</td>
+            <td class="negative">-13.42%</td>
+            <td class="negative">-13,419.84</td>
+            <td>36</td>
+        </tr>
+
+        <tr>
+            <td>2021-12-08</td>
+            <td>2022-01-04</td>
+            <td>多头</td>
+            <td>132.47</td>
+            <td>139.23</td>
+            <td class="positive">5.10%</td>
+            <td class="positive">5,102.63</td>
+            <td>27</td>
+        </tr>
+
+        <tr>
+            <td>2022-01-04</td>
+            <td>2022-01-05</td>
+            <td>空头</td>
+            <td>139.23</td>
+            <td>137.91</td>
+            <td class="positive">0.94%</td>
+            <td class="positive">944.26</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2022-01-05</td>
+            <td>2022-01-08</td>
+            <td>多头</td>
+            <td>137.91</td>
+            <td>142.55</td>
+            <td class="positive">3.36%</td>
+            <td class="positive">3,360.17</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2022-01-08</td>
+            <td>2022-01-27</td>
+            <td>空头</td>
+            <td>142.55</td>
+            <td>143.98</td>
+            <td class="negative">-1.00%</td>
+            <td class="negative">-1,002.51</td>
+            <td>19</td>
+        </tr>
+
+        <tr>
+            <td>2022-01-27</td>
+            <td>2022-02-01</td>
+            <td>多头</td>
+            <td>143.98</td>
+            <td>152.27</td>
+            <td class="positive">5.76%</td>
+            <td class="positive">5,760.31</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>2022-02-01</td>
+            <td>2022-02-06</td>
+            <td>空头</td>
+            <td>152.27</td>
+            <td>150.86</td>
+            <td class="positive">0.92%</td>
+            <td class="positive">924.26</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>2022-02-06</td>
+            <td>2022-03-21</td>
+            <td>多头</td>
+            <td>150.86</td>
+            <td>144.19</td>
+            <td class="negative">-4.42%</td>
+            <td class="negative">-4,424.74</td>
+            <td>43</td>
+        </tr>
+
+        <tr>
+            <td>2022-03-21</td>
+            <td>2022-05-31</td>
+            <td>空头</td>
+            <td>144.19</td>
+            <td>138.55</td>
+            <td class="positive">3.91%</td>
+            <td class="positive">3,912.86</td>
+            <td>71</td>
+        </tr>
+
+        <tr>
+            <td>2022-05-31</td>
+            <td>2022-06-22</td>
+            <td>多头</td>
+            <td>138.55</td>
+            <td>150.15</td>
+            <td class="positive">8.37%</td>
+            <td class="positive">8,373.02</td>
+            <td>22</td>
+        </tr>
+
+        <tr>
+            <td>2022-06-22</td>
+            <td>2022-06-23</td>
+            <td>空头</td>
+            <td>150.15</td>
+            <td>147.23</td>
+            <td class="positive">1.95%</td>
+            <td class="positive">1,945.40</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2022-06-23</td>
+            <td>2022-06-28</td>
+            <td>多头</td>
+            <td>147.23</td>
+            <td>154.89</td>
+            <td class="positive">5.20%</td>
+            <td class="positive">5,203.77</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>2022-06-28</td>
+            <td>2022-06-30</td>
+            <td>空头</td>
+            <td>154.89</td>
+            <td>149.77</td>
+            <td class="positive">3.31%</td>
+            <td class="positive">3,306.89</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2022-06-30</td>
+            <td>2022-07-02</td>
+            <td>多头</td>
+            <td>149.77</td>
+            <td>154.55</td>
+            <td class="positive">3.20%</td>
+            <td class="positive">3,197.35</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2022-07-02</td>
+            <td>2022-07-05</td>
+            <td>空头</td>
+            <td>154.55</td>
+            <td>152.72</td>
+            <td class="positive">1.19%</td>
+            <td class="positive">1,189.13</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2022-07-05</td>
+            <td>2022-07-17</td>
+            <td>多头</td>
+            <td>152.72</td>
+            <td>159.71</td>
+            <td class="positive">4.58%</td>
+            <td class="positive">4,581.82</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>2022-07-17</td>
+            <td>2022-07-31</td>
+            <td>空头</td>
+            <td>159.71</td>
+            <td>160.94</td>
+            <td class="negative">-0.77%</td>
+            <td class="negative">-765.13</td>
+            <td>14</td>
+        </tr>
+
+        <tr>
+            <td>2022-07-31</td>
+            <td>2022-08-02</td>
+            <td>多头</td>
+            <td>160.94</td>
+            <td>164.98</td>
+            <td class="positive">2.51%</td>
+            <td class="positive">2,512.81</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2022-08-02</td>
+            <td>2022-08-03</td>
+            <td>空头</td>
+            <td>164.98</td>
+            <td>156.44</td>
+            <td class="positive">5.17%</td>
+            <td class="positive">5,173.41</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2022-08-03</td>
+            <td>2022-08-11</td>
+            <td>多头</td>
+            <td>156.44</td>
+            <td>165.39</td>
+            <td class="positive">5.72%</td>
+            <td class="positive">5,721.25</td>
+            <td>8</td>
+        </tr>
+
+        <tr>
+            <td>2022-08-11</td>
+            <td>2022-08-14</td>
+            <td>空头</td>
+            <td>165.39</td>
+            <td>162.47</td>
+            <td class="positive">1.77%</td>
+            <td class="positive">1,768.34</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2022-08-14</td>
+            <td>2022-09-18</td>
+            <td>多头</td>
+            <td>162.47</td>
+            <td>153.91</td>
+            <td class="negative">-5.27%</td>
+            <td class="negative">-5,271.22</td>
+            <td>35</td>
+        </tr>
+
+        <tr>
+            <td>2022-09-18</td>
+            <td>2022-11-27</td>
+            <td>空头</td>
+            <td>153.91</td>
+            <td>146.08</td>
+            <td class="positive">5.09%</td>
+            <td class="positive">5,086.11</td>
+            <td>70</td>
+        </tr>
+
+        <tr>
+            <td>2022-11-27</td>
+            <td>2022-11-29</td>
+            <td>多头</td>
+            <td>146.08</td>
+            <td>149.78</td>
+            <td class="positive">2.53%</td>
+            <td class="positive">2,534.40</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2022-11-29</td>
+            <td>2022-12-08</td>
+            <td>空头</td>
+            <td>149.78</td>
+            <td>157.33</td>
+            <td class="negative">-5.04%</td>
+            <td class="negative">-5,039.31</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td>2022-12-08</td>
+            <td>2022-12-19</td>
+            <td>多头</td>
+            <td>157.33</td>
+            <td>166.64</td>
+            <td class="positive">5.92%</td>
+            <td class="positive">5,917.77</td>
+            <td>11</td>
+        </tr>
+
+        <tr>
+            <td>2022-12-19</td>
+            <td>2022-12-20</td>
+            <td>空头</td>
+            <td>166.64</td>
+            <td>161.89</td>
+            <td class="positive">2.85%</td>
+            <td class="positive">2,852.32</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2022-12-20</td>
+            <td>2023-01-07</td>
+            <td>多头</td>
+            <td>161.89</td>
+            <td>173.33</td>
+            <td class="positive">7.07%</td>
+            <td class="positive">7,067.50</td>
+            <td>18</td>
+        </tr>
+
+        <tr>
+            <td>2023-01-07</td>
+            <td>2023-01-08</td>
+            <td>空头</td>
+            <td>173.33</td>
+            <td>166.99</td>
+            <td class="positive">3.65%</td>
+            <td class="positive">3,653.86</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-01-08</td>
+            <td>2023-01-14</td>
+            <td>多头</td>
+            <td>166.99</td>
+            <td>175.20</td>
+            <td class="positive">4.92%</td>
+            <td class="positive">4,915.52</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>2023-01-14</td>
+            <td>2023-01-15</td>
+            <td>空头</td>
+            <td>175.20</td>
+            <td>169.22</td>
+            <td class="positive">3.42%</td>
+            <td class="positive">3,416.18</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-01-15</td>
+            <td>2023-03-24</td>
+            <td>多头</td>
+            <td>169.22</td>
+            <td>171.33</td>
+            <td class="positive">1.25%</td>
+            <td class="positive">1,249.20</td>
+            <td>68</td>
+        </tr>
+
+        <tr>
+            <td>2023-03-24</td>
+            <td>2023-04-23</td>
+            <td>空头</td>
+            <td>171.33</td>
+            <td>164.80</td>
+            <td class="positive">3.81%</td>
+            <td class="positive">3,813.27</td>
+            <td>30</td>
+        </tr>
+
+        <tr>
+            <td>2023-04-23</td>
+            <td>2023-04-25</td>
+            <td>多头</td>
+            <td>164.80</td>
+            <td>165.03</td>
+            <td class="positive">0.14%</td>
+            <td class="positive">141.57</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2023-04-25</td>
+            <td>2023-06-02</td>
+            <td>空头</td>
+            <td>165.03</td>
+            <td>171.18</td>
+            <td class="negative">-3.72%</td>
+            <td class="negative">-3,723.25</td>
+            <td>38</td>
+        </tr>
+
+        <tr>
+            <td>2023-06-02</td>
+            <td>2023-06-03</td>
+            <td>多头</td>
+            <td>171.18</td>
+            <td>166.03</td>
+            <td class="negative">-3.01%</td>
+            <td class="negative">-3,008.02</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-06-03</td>
+            <td>2023-06-07</td>
+            <td>空头</td>
+            <td>166.03</td>
+            <td>172.78</td>
+            <td class="negative">-4.07%</td>
+            <td class="negative">-4,065.25</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>2023-06-07</td>
+            <td>2023-06-23</td>
+            <td>多头</td>
+            <td>172.78</td>
+            <td>180.22</td>
+            <td class="positive">4.31%</td>
+            <td class="positive">4,311.09</td>
+            <td>16</td>
+        </tr>
+
+        <tr>
+            <td>2023-06-23</td>
+            <td>2023-06-26</td>
+            <td>空头</td>
+            <td>180.22</td>
+            <td>174.28</td>
+            <td class="positive">3.30%</td>
+            <td class="positive">3,300.38</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2023-06-26</td>
+            <td>2023-06-30</td>
+            <td>多头</td>
+            <td>174.28</td>
+            <td>185.92</td>
+            <td class="positive">6.68%</td>
+            <td class="positive">6,683.30</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>2023-06-30</td>
+            <td>2023-07-04</td>
+            <td>空头</td>
+            <td>185.92</td>
+            <td>180.79</td>
+            <td class="positive">2.76%</td>
+            <td class="positive">2,759.12</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>2023-07-04</td>
+            <td>2023-07-15</td>
+            <td>多头</td>
+            <td>180.79</td>
+            <td>191.71</td>
+            <td class="positive">6.04%</td>
+            <td class="positive">6,036.00</td>
+            <td>11</td>
+        </tr>
+
+        <tr>
+            <td>2023-07-15</td>
+            <td>2023-07-16</td>
+            <td>空头</td>
+            <td>191.71</td>
+            <td>184.54</td>
+            <td class="positive">3.74%</td>
+            <td class="positive">3,737.71</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-07-16</td>
+            <td>2023-08-05</td>
+            <td>多头</td>
+            <td>184.54</td>
+            <td>194.15</td>
+            <td class="positive">5.21%</td>
+            <td class="positive">5,208.01</td>
+            <td>20</td>
+        </tr>
+
+        <tr>
+            <td>2023-08-05</td>
+            <td>2023-08-24</td>
+            <td>空头</td>
+            <td>194.15</td>
+            <td>195.74</td>
+            <td class="negative">-0.82%</td>
+            <td class="negative">-817.72</td>
+            <td>19</td>
+        </tr>
+
+        <tr>
+            <td>2023-08-24</td>
+            <td>2023-09-17</td>
+            <td>多头</td>
+            <td>195.74</td>
+            <td>182.48</td>
+            <td class="negative">-6.77%</td>
+            <td class="negative">-6,773.56</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            <td>2023-09-17</td>
+            <td>2023-12-07</td>
+            <td>空头</td>
+            <td>182.48</td>
+            <td>185.98</td>
+            <td class="negative">-1.92%</td>
+            <td class="negative">-1,919.86</td>
+            <td>81</td>
+        </tr>
+
+        <tr>
+            <td>2023-12-07</td>
+            <td>2023-12-19</td>
+            <td>多头</td>
+            <td>185.98</td>
+            <td>193.99</td>
+            <td class="positive">4.31%</td>
+            <td class="positive">4,305.38</td>
+            <td>12</td>
+        </tr>
+
+        <tr>
+            <td>2023-12-19</td>
+            <td>2023-12-20</td>
+            <td>空头</td>
+            <td>193.99</td>
+            <td>190.67</td>
+            <td class="positive">1.71%</td>
+            <td class="positive">1,712.07</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-12-20</td>
+            <td>2023-12-22</td>
+            <td>多头</td>
+            <td>190.67</td>
+            <td>196.38</td>
+            <td class="positive">3.00%</td>
+            <td class="positive">2,996.79</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2023-12-22</td>
+            <td>2023-12-23</td>
+            <td>空头</td>
+            <td>196.38</td>
+            <td>192.34</td>
+            <td class="positive">2.06%</td>
+            <td class="positive">2,059.03</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-12-23</td>
+            <td>2023-12-24</td>
+            <td>多头</td>
+            <td>192.34</td>
+            <td>199.77</td>
+            <td class="positive">3.86%</td>
+            <td class="positive">3,861.19</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2023-12-24</td>
+            <td>2024-01-07</td>
+            <td>空头</td>
+            <td>199.77</td>
+            <td>198.10</td>
+            <td class="positive">0.83%</td>
+            <td class="positive">832.33</td>
+            <td>14</td>
+        </tr>
+
+        <tr>
+            <td>2024-01-07</td>
+            <td>2024-01-22</td>
+            <td>多头</td>
+            <td>198.10</td>
+            <td>207.02</td>
+            <td class="positive">4.50%</td>
+            <td class="positive">4,499.95</td>
+            <td>15</td>
+        </tr>
+
+        <tr>
+            <td>2024-01-22</td>
+            <td>2024-01-23</td>
+            <td>空头</td>
+            <td>207.02</td>
+            <td>200.93</td>
+            <td class="positive">2.94%</td>
+            <td class="positive">2,942.07</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2024-01-23</td>
+            <td>2024-01-29</td>
+            <td>多头</td>
+            <td>200.93</td>
+            <td>207.51</td>
+            <td class="positive">3.27%</td>
+            <td class="positive">3,274.90</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>2024-01-29</td>
+            <td>2024-02-01</td>
+            <td>空头</td>
+            <td>207.51</td>
+            <td>202.72</td>
+            <td class="positive">2.31%</td>
+            <td class="positive">2,305.54</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2024-02-01</td>
+            <td>2024-03-19</td>
+            <td>多头</td>
+            <td>202.72</td>
+            <td>196.43</td>
+            <td class="negative">-3.10%</td>
+            <td class="negative">-3,104.76</td>
+            <td>47</td>
+        </tr>
+
+        <tr>
+            <td>2024-03-19</td>
+            <td>2024-04-11</td>
+            <td>空头</td>
+            <td>196.43</td>
+            <td>193.52</td>
+            <td class="positive">1.48%</td>
+            <td class="positive">1,481.41</td>
+            <td>23</td>
+        </tr>
+
+        <tr>
+            <td>2024-04-11</td>
+            <td>2024-04-12</td>
+            <td>多头</td>
+            <td>193.52</td>
+            <td>203.27</td>
+            <td class="positive">5.04%</td>
+            <td class="positive">5,036.45</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2024-04-12</td>
+            <td>2024-05-10</td>
+            <td>空头</td>
+            <td>203.27</td>
+            <td>189.13</td>
+            <td class="positive">6.95%</td>
+            <td class="positive">6,953.20</td>
+            <td>28</td>
+        </tr>
+
+        <tr>
+            <td>2024-05-10</td>
+            <td>2024-05-11</td>
+            <td>多头</td>
+            <td>189.13</td>
+            <td>199.22</td>
+            <td class="positive">5.33%</td>
+            <td class="positive">5,334.38</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2024-05-11</td>
+            <td>2024-06-02</td>
+            <td>空头</td>
+            <td>199.22</td>
+            <td>200.06</td>
+            <td class="negative">-0.42%</td>
+            <td class="negative">-422.09</td>
+            <td>22</td>
+        </tr>
+
+        <tr>
+            <td>2024-06-02</td>
+            <td>2024-06-26</td>
+            <td>多头</td>
+            <td>200.06</td>
+            <td>213.95</td>
+            <td class="positive">6.94%</td>
+            <td class="positive">6,941.39</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            <td>2024-06-26</td>
+            <td>2024-06-28</td>
+            <td>空头</td>
+            <td>213.95</td>
+            <td>208.54</td>
+            <td class="positive">2.53%</td>
+            <td class="positive">2,528.47</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2024-06-28</td>
+            <td>2024-07-07</td>
+            <td>多头</td>
+            <td>208.54</td>
+            <td>219.44</td>
+            <td class="positive">5.23%</td>
+            <td class="positive">5,227.34</td>
+            <td>9</td>
+        </tr>
+
+        <tr>
+            <td>2024-07-07</td>
+            <td>2024-07-08</td>
+            <td>空头</td>
+            <td>219.44</td>
+            <td>213.77</td>
+            <td class="positive">2.59%</td>
+            <td class="positive">2,587.00</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2024-07-08</td>
+            <td>2024-08-01</td>
+            <td>多头</td>
+            <td>213.77</td>
+            <td>224.11</td>
+            <td class="positive">4.84%</td>
+            <td class="positive">4,838.12</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            <td>2024-08-01</td>
+            <td>2024-08-03</td>
+            <td>空头</td>
+            <td>224.11</td>
+            <td>223.35</td>
+            <td class="positive">0.34%</td>
+            <td class="positive">338.89</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>2024-08-03</td>
+            <td>2024-08-22</td>
+            <td>多头</td>
+            <td>223.35</td>
+            <td>227.86</td>
+            <td class="positive">2.02%</td>
+            <td class="positive">2,020.34</td>
+            <td>19</td>
+        </tr>
+
+        <tr>
+            <td>2024-08-22</td>
+            <td>2024-08-30</td>
+            <td>空头</td>
+            <td>227.86</td>
+            <td>225.36</td>
+            <td class="positive">1.10%</td>
+            <td class="positive">1,097.59</td>
+            <td>8</td>
+        </tr>
+
+        <tr>
+            <td>2024-08-30</td>
+            <td>2024-09-22</td>
+            <td>多头</td>
+            <td>225.36</td>
+            <td>217.71</td>
+            <td class="negative">-3.40%</td>
+            <td class="negative">-3,395.86</td>
+            <td>23</td>
+        </tr>
+
+        <tr>
+            <td>2024-09-22</td>
+            <td>2024-10-16</td>
+            <td>空头</td>
+            <td>217.71</td>
+            <td>206.78</td>
+            <td class="positive">5.02%</td>
+            <td class="positive">5,019.42</td>
+            <td>24</td>
+        </tr>
+
+        <tr>
+            <td>2024-10-16</td>
+            <td>2024-10-17</td>
+            <td>多头</td>
+            <td>206.78</td>
+            <td>216.76</td>
+            <td class="positive">4.83%</td>
+            <td class="positive">4,829.03</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2024-10-17</td>
+            <td>2024-12-06</td>
+            <td>空头</td>
+            <td>216.76</td>
+            <td>216.45</td>
+            <td class="positive">0.15%</td>
+            <td class="positive">146.81</td>
+            <td>50</td>
+        </tr>
+
+        <tr>
+            <td>2024-12-06</td>
+            <td>2024-12-17</td>
+            <td>多头</td>
+            <td>216.45</td>
+            <td>224.66</td>
+            <td class="positive">3.79%</td>
+            <td class="positive">3,794.46</td>
+            <td>11</td>
+        </tr>
+
+        <tr>
+            <td>2024-12-17</td>
+            <td>2024-12-18</td>
+            <td>空头</td>
+            <td>224.66</td>
+            <td>222.84</td>
+            <td class="positive">0.81%</td>
+            <td class="positive">811.20</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>2024-12-18</td>
+            <td>2025-01-01</td>
+            <td>多头</td>
+            <td>222.84</td>
+            <td>229.23</td>
+            <td class="positive">2.87%</td>
+            <td class="positive">2,870.43</td>
+            <td>14</td>
+        </tr>
+
+        <tr>
+            <td>2025-01-01</td>
+            <td>2025-01-01</td>
+            <td>空头</td>
+            <td>229.23</td>
+            <td>229.23</td>
+            <td class="negative">-0.00%</td>
+            <td class="negative">-0.00</td>
+            <td>0</td>
+        </tr>
+</table></body></html>

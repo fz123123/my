@@ -1,0 +1,101 @@
+name: Quant Trading CI (Windows)
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: '3.12'
+  NODE_VERSION: '20'
+
+jobs:
+  test-all-projects:
+    name: Test All Projects
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install dependencies and run all tests
+        shell: pwsh
+        run: |
+          Write-Host "=== Starting test execution ==="
+          $ErrorActionPreference = "Continue"
+          
+          # Test Project 0
+          Write-Host "`n=== Testing Project 0 ==="
+          Push-Location "0"
+          if (Test-Path "requirements.txt") {
+            python -m pip install -r requirements.txt
+          }
+          if (Test-Path "tests") {
+            Get-ChildItem "tests" -Filter "test_*.py" | ForEach-Object {
+              python "tests/$($_.Name)"
+              if ($LASTEXITCODE -ne 0) {
+                Write-Host "❌ Test failed in Project 0"
+              }
+            }
+          }
+          Pop-Location
+          
+          # Test Project 17
+          Write-Host "`n=== Testing Project 17 ==="
+          Push-Location "17"
+          if (Test-Path "tests") {
+            Get-ChildItem "tests" -Filter "test_*.py" | ForEach-Object {
+              python "tests/$($_.Name)"
+              if ($LASTEXITCODE -ne 0) {
+                Write-Host "❌ Test failed in Project 17"
+              }
+            }
+          }
+          Pop-Location
+          
+          # Test Project 33
+          Write-Host "`n=== Testing Project 33 ==="
+          Push-Location "33"
+          if (Test-Path "package.json") {
+            npm ci
+            npm run build
+          }
+          if (Test-Path "tests") {
+            $testFiles = Get-ChildItem "tests" -Filter "*.test.ts" -ErrorAction SilentlyContinue
+            foreach ($testFile in $testFiles) {
+              npx ts-node "tests/$($testFile.Name)"
+              if ($LASTEXITCODE -ne 0) {
+                Write-Host "❌ Test failed in Project 33"
+              }
+            }
+          }
+          Pop-Location
+          
+          # Test Project 88
+          Write-Host "`n=== Testing Project 88 ==="
+          Push-Location "88"
+          if (Test-Path "tests") {
+            Get-ChildItem "tests" -Filter "test_*.py" | ForEach-Object {
+              python "tests/$($_.Name)"
+              if ($LASTEXITCODE -ne 0) {
+                Write-Host "❌ Test failed in Project 88"
+              }
+            }
+          }
+          Pop-Location
+          
+          Write-Host "`n=== All tests completed ==="

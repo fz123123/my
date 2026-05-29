@@ -1,0 +1,88 @@
+================================================================================
+        QUANTITATIVE STRATEGY BACKTEST SUMMARY REPORT
+================================================================================
+Generated on: 2026-05-24 10:15:52
+Symbol: TEST
+Date Range: 2020-01-01 to 2023-01-01
+Total Trading Days: 783
+Initial Capital: $100,000
+Commission Rate: 0.10%
+Slippage Rate: 0.10%
+================================================================================
+
+1. STRATEGY PERFORMANCE SUMMARY
+----------------------------------------
+
+Strategy: MA_Crossover
+--------------------
+  Total Return:           -0.07%
+  Annualized Return:      -0.02%
+  Volatility:             0.11%
+  Sharpe Ratio:           -0.21
+  Max Drawdown:           -0.20%
+  Calmar Ratio:           -0.12
+  Total Trades:           18
+  Win Rate:               27.46%
+  Final Equity:           $99,927.43
+
+Strategy: RSI
+--------------------
+  Total Return:           0.29%
+  Annualized Return:      0.09%
+  Volatility:             0.10%
+  Sharpe Ratio:           0.93
+  Max Drawdown:           -0.16%
+  Calmar Ratio:           0.57
+  Total Trades:           23
+  Win Rate:               24.27%
+  Final Equity:           $100,290.32
+
+Strategy: MACD
+--------------------
+  Total Return:           0.10%
+  Annualized Return:      0.03%
+  Volatility:             0.11%
+  Sharpe Ratio:           0.31
+  Max Drawdown:           -0.12%
+  Calmar Ratio:           0.29
+  Total Trades:           54
+  Win Rate:               23.50%
+  Final Equity:           $100,103.02
+
+Strategy: Bollinger_Band
+--------------------
+  Total Return:           0.09%
+  Annualized Return:      0.03%
+  Volatility:             0.08%
+  Sharpe Ratio:           0.33
+  Max Drawdown:           -0.13%
+  Calmar Ratio:           0.21
+  Total Trades:           19
+  Win Rate:               18.39%
+  Final Equity:           $100,086.77
+
+2. STRATEGY COMPARISON TABLE
+----------------------------------------
+
+      Strategy Total Return Annualized Return Sharpe Ratio Max Drawdown Total Trades Win Rate
+  MA_Crossover       -0.07%            -0.02%        -0.21       -0.20%           18   27.46%
+           RSI        0.29%             0.09%         0.93       -0.16%           23   24.27%
+          MACD        0.10%             0.03%         0.31       -0.12%           54   23.50%
+Bollinger_Band        0.09%             0.03%         0.33       -0.13%           19   18.39%
+
+3. BEST PERFORMING STRATEGY
+----------------------------------------
+
+Top Strategy: RSI
+Reason: Highest Total Return (0.29%)
+
+Key Metrics:
+  - Total Return:      0.29%
+  - Annualized Return: 0.09%
+  - Sharpe Ratio:      0.93
+  - Max Drawdown:      -0.16%
+  - Total Trades:      23
+
+================================================================================
+         END OF REPORT
+================================================================================

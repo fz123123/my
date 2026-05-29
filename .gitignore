@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environment
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Test coverage
+htmlcov/
+.coverage
+.pytest_cache/
+.mypy_cache/
+
+# Data files (optional - exclude large data files)
+*.csv
+!**/test_*.csv
+!**/sample*.csv
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Node modules
+node_modules/
+
+# CI artifacts
+test-results/

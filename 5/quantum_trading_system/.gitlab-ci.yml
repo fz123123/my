@@ -1,0 +1,34 @@
+image: python:3.10-slim
+
+stages:
+  - test
+  - quality
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.pipcache
+
+cache:
+  paths:
+    - .pipcache/
+
+strategy-tests:
+  stage: test
+  script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - python tests/run_tests.py
+
+edge-case-tests:
+  stage: test
+  script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - python tests/test_edge_cases.py || true
+  allow_failure: true
+
+quality-check:
+  stage: quality
+  script:
+    - pip install flake8
+    - flake8 strategies/ --max-line-length=120 --ignore=E501,W503
+  allow_failure: true

@@ -1,0 +1,10 @@
+{
+  "tushare": {
+    "token": "你的Tushare Token",
+    "enabled": true
+  },
+  "data": {
+    "cacheDir": "./data/cache",
+    "useTushare": true
+  }
+}

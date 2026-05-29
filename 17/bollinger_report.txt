@@ -1,0 +1,38 @@
+============================================================
+QUANTITATIVE STRATEGY BACKTEST REPORT
+============================================================
+Generated on: 2026-05-24 10:11:45
+
+1. RETURN METRICS
+------------------------------
+Total Return:          -0.17%
+Annualized Return:     -0.05%
+Average Daily Return:  -0.0000
+Best Day:              0.03%
+Worst Day:             -0.03%
+
+2. RISK METRICS
+------------------------------
+Volatility (Annualized):  0.10%
+Standard Deviation:       0.0001
+Maximum Drawdown:         -0.40%
+
+3. RISK-ADJUSTED RETURN METRICS
+------------------------------
+Sharpe Ratio:          -0.57
+Sortino Ratio:         -0.60
+Calmar Ratio:          -0.14
+
+4. TRADE STATISTICS
+------------------------------
+Total Number of Trades:   10
+Win Rate:                 21.20%
+Profit Factor:            0.99
+Total PnL:                $-158.41
+Average Trade PnL:        $-15.84
+Average Win:              $49.99
+Average Loss:             $-59.73
+
+============================================================
+END OF REPORT
+============================================================
