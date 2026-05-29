@@ -13,11 +13,13 @@ on:
 jobs:
   update-readme:
     name: Auto Update README
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,29 +27,25 @@ jobs:
           python-version: '3.12'
       
       - name: Update README
-        shell: pwsh
         run: |
-          Write-Host "=== Updating README ==="
-          python update_readme.py
+          echo "=== Updating README ==="
+          python3 update_readme.py
       
       - name: Check for changes
         id: check_changes
-        shell: pwsh
         run: |
-          $status = git status --porcelain
-          if ($status) {
-            Write-Host "Changes detected"
-            echo "changes=true" >> $env:GITHUB_OUTPUT
-          } else {
-            Write-Host "No changes detected"
-            echo "changes=false" >> $env:GITHUB_OUTPUT
-          }
+          if git status --porcelain; then
+            echo "Changes detected"
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes detected"
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
       
       - name: Commit and push changes
         if: steps.check_changes.outputs.changes == 'true'
-        shell: pwsh
         run: |
-          Write-Host "=== Committing changes ==="
+          echo "=== Committing changes ==="
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
