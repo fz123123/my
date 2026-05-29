@@ -22,6 +22,8 @@ def get_project_info(project_dir):
         'description': ''
     }
     
+    print(f"  检查项目 {project_dir}...")
+    
     # 检查 package.json
     package_json = os.path.join(project_dir, 'package.json')
     if os.path.exists(package_json):
@@ -30,8 +32,8 @@ def get_project_info(project_dir):
                 data = json.load(f)
                 info['has_package_json'] = True
                 info['description'] = data.get('description', '')
-        except:
-            pass
+        except Exception as e:
+            print(f"    ⚠️  读取 package.json 失败: {e}")
     
     # 检查 requirements.txt
     if os.path.exists(os.path.join(project_dir, 'requirements.txt')):
@@ -41,8 +43,14 @@ def get_project_info(project_dir):
     tests_dir = os.path.join(project_dir, 'tests')
     if os.path.exists(tests_dir) and os.path.isdir(tests_dir):
         info['has_tests'] = True
-        test_files = [f for f in os.listdir(tests_dir) if f.startswith('test_') or f.endswith('.test.ts')]
+        # 统计所有测试文件
+        test_files = []
+        for root, dirs, files in os.walk(tests_dir):
+            for file in files:
+                if file.startswith('test_') or file.endswith('.test.ts') or file.endswith('.test.js'):
+                    test_files.append(file)
         info['test_count'] = len(test_files)
+        print(f"    ✅ 找到 {len(test_files)} 个测试文件")
     
     # 检查 src 和 dist 目录
     if os.path.exists(os.path.join(project_dir, 'src')):
@@ -58,6 +66,7 @@ def generate_readme_section():
     projects = ['0', '17', '33', '88']
     project_info_list = []
     
+    print("=== 扫描项目信息 ===")
     for proj in projects:
         if os.path.exists(proj):
             project_info_list.append(get_project_info(proj))
@@ -78,6 +87,7 @@ def generate_readme_section():
         
         table += f"| **项目{info['name']}** | {package_json}/{requirements_txt} | {src} | {dist} | {tests} | {test_count} | {last_update} |\n"
     
+    print(f"\n=== 生成项目状态表格完成，共 {len(project_info_list)} 个项目 ===\n")
     return table
 
 
@@ -86,8 +96,10 @@ def update_readme():
     readme_path = 'README.md'
     
     if not os.path.exists(readme_path):
-        print("README.md 不存在，跳过更新")
-        return
+        print("❌ README.md 不存在，跳过更新")
+        return False
+    
+    print(f"📄 更新 README.md 文件: {readme_path}")
     
     # 读取现有 README
     with open(readme_path, 'r', encoding='utf-8') as f:
@@ -113,9 +125,22 @@ def update_readme():
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
-    print("✅ README.md 已更新")
+    print("✅ README.md 已成功更新！")
     return True
 
 
 if __name__ == "__main__":
-    update_readme()
+    print("=" * 50)
+    print("      README 自动更新脚本")
+    print("=" * 50)
+    print()
+    
+    success = update_readme()
+    
+    print()
+    print("=" * 50)
+    if success:
+        print("      执行完成！")
+    else:
+        print("      执行失败！")
+    print("=" * 50)
